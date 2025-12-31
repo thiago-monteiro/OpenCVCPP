@@ -132,13 +132,3 @@ int main() {
 
 	return 0;
 }
-
-// Provide WinMain wrapper to satisfy linker when project subsystem is Windows
-#ifdef _WIN32
-#include <windows.h>
-
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
-	// Forward to main so the same logic runs regardless of subsystem
-	return main();
-}
-#endif
